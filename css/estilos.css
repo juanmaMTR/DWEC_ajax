@@ -1,0 +1,29 @@
+body{
+  font-family: sans-serif;
+}
+h2 {
+  border-bottom: 1px solid black;
+}
+div.test{
+  margin: 0.5em;
+  border: 2px solid blue;
+  border-radius: 0.2em;
+  padding: 0.3em;
+}
+.test button {
+  margin: 0.3em;
+}
+.ok{
+  background-color: green;
+}
+.ok:before{
+  content: 'OK: '
+}
+
+.nok{
+  background-color: red;
+  color: white;
+}
+.nok:before{
+  content: 'NOK: '
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang=es dir=ltr>
+
+<head>
+	<meta charset=utf-8 />
+	<meta http-equiv=X-UA-Compatible content='IE=edge' />
+	<meta name=viewport content='width=device-width, initial-scale=1' />
+	<meta name=author content=mjaque@migueljaque.com />
+	<meta name=description content='Ejercicios de AJAX con JavaScript' />
+	<meta name=keywords content='Desarrollo Web en Entorno Cliente' />
+	<title>Ejercicios de AJAX con JavaScript</title>
+
+	<link rel=stylesheet href=../../css/estilos.css />
+</head>
+
+<body>
+	<h1>Ejercicios de AJAX JavaScript</h1>
+	<p>En esta prueba debes demostrar que "desarrollas aplicaciones web dinámicas, reconociendo y aplicando mecanismos de comunicación asíncrona entre cliente y servidor".</p>
+	<p>En concreto debes:</p>
+	<ol>
+		<li>Evaluar las ventajas e inconvenientes de utilizar mecanismos de comunicación asíncrona entre cliente y servidor web.</li>
+		<li>Analizar los mecanismos disponibles para el establecimiento de la comunicación asíncrona..</li>
+		<li>Utilizar los objetos relacionados con la comunicación asíncrona.</li>
+		<li>Identificar sus propiedades y métodos.</li>
+		<li>Utilizar comunicación asíncrona en la actualización dinámica del documento web..</li>
+		<li>Utilizar distintos formatos en el envío y recepción de información.</li>
+		<li>Programar aplicaciones web asíncronas de forma que funcionen en diferentes navegadores.</li>
+	</ol>
+
+	<h2>Ejercicio</h2>
+	<p>Completa la función cargarFicheroTextoFetch para que utilice el método window.fetch y cargue el fichero ./php/datos.txt y muestre su contenido en el div1.</p>
+	<div id=div1></div>
+	<div data-test=testCargarFicheroTextoFetch></div>
+
+	<h2>Ejercicio</h2>
+	<p>Completa la función cargarFicheroTextoXMLHttpRequest1 para que utilice el objeto XHMLHttpRequest y programa su evento onload para que cargue el fichero ./php/datos.txt y muestre su contenido en el div2.</p>
+	<div id=div2></div>
+	<div data-test=testCargarFicheroTextoXMLHttpRequest1></div>
+
+	<h2>Ejercicio</h2>
+	<p>Completa la función cargarFicheroTextoXMLHttpRequest2 para que utilice el objeto XHMLHttpRequest y programa su evento onreadystatechange para que cargue el fichero ./php/datos.txt y muestre su contenido en el div3.</p>
+	<div id=div3></div>
+	<div data-test=testCargarFicheroTextoXMLHttpRequest2></div>
+
+	<h2>Ejercicio</h2>
+	<p>Completa la función enviarParametrosGET para que, utilizando el método fetch, envíe por el método GET a la URL "php/datos_get.php", dos parámetros. El primero tendrá de nombre "param1" y el valor 42 y el segundo parámetro tendrá de nombre "param2" y de valor "Brendan Eich". La respuesta del servidor se mostrará en el div4.</p>
+	<div id=div4></div>
+	<div data-test=testEnviarParametrosGET></div>
+
+	<h2>Ejercicio</h2>
+	<p>Completa la función enviarParametrosPOST para que, utilizando el método fetch, envíe por POST a la URL "php/datos_post.php", dos parámetros. El primero tendrá de nombre "param1" y el valor 42 y el segundo parámetro tendrá de nombre "param2" y de valor "Brendan Eich". La respuesta del servidor se mostrará en el div5.</p>
+	<div id=div5></div>
+	<div data-test=testEnviarParametrosPOST></div>
+
+	<h2>Ejercicio</h2>
+	<p>Completa la función recibirJSON para que, utilizando el método fetch, envíe por POST a la URL "php/datos_post2.php", un parámetro de nombre 'respuesta' y valor 'json'. La respuesta del servidor será un fichero JSON. El atributo 'atrib1' del objeto JSON se mostrará en el div6.</p>
+	<div id=div6></div>
+	<div data-test=testRecibirJSON></div>
+
+	<h2>Ejercicio</h2>
+	<p>Completa la función recibirXML para que, utilizando el método fetch, envíe por POST a la URL "php/datos_post2.php", un parámetro de nombre 'respuesta' y valor 'xml'. La respuesta del servidor será un fichero XML. El atributo 'atrib1' del nodo raíz del fichero XML se mostrará en el div7.</p>
+	<div id=div7></div>
+	<div data-test=testRecibirXML></div>
+
+	<h2>Ejercicio</h2>
+	<p>Completa la función controlarErrores para que, utilizando el el método GET del objeto XMLHttpRequest, realice una petición AJAX a la URL "php/error.php". Deberá controlar errores del tipo 404, 503 y 418	mostrando en el div8 el número del código del error.</p>
+	<div id=div8></div>
+	<div data-test=testControlarErrores></div>
+
+	<h2>Ejercicio</h2>
+	<p>Completa la función controlarTimeout para que, utilizando el el método GET del objeto XMLHttpRequest, realice una petición AJAX a la URL "php/timeout.php". Si la petición no se responde en menos de 5 segundos, deberá mostrar en el div indicado el texto "timeout".</p>
+	<p>Este test tardará varios segundos en dar el resultado correcto.</p>
+	<div id=div9></div>
+	<div data-test=testControlarTimeout></div>
+
+	<h2>Ejercicio</h2>
+	<p>Completa la función peticionCORS para realizar una petición GET a la URL 'http://migueljaque.com/test.php' y muestra el texto recibido en el div indicado.</p>
+	<div id=div10></div>
+	<div data-test=testPeticionCORS></div>
+
+	<h2>Ejercicio</h2>
+	<p>Completa la función enviarFichero para realizar una peticón POST a la URL 'php/imagen.php' para enviarle como parámetro un fichero de texto con el nombre de parámetro "fichero". El fichero debe contener el texto 'me atrevo' (tienes un fichero así en este directorio) que deberás cargar en el input file1. Si la petición se realiza correctamente, recibirás el código en base64 de una imagen en formato png que deberás mostrar en img1.</p>
+	<input type=file id=file1 />
+	<img id=img1 />
+	<div data-test=testEnviarFichero></div>
+
+
+	<script src=./ajax.js></script>
+	<script src=./tests.js></script>
+	<script src=../../js/tester.js></script>
+</body>
+
+</html>
