@@ -101,7 +101,7 @@ La respuesta esperada es de tipo texto.
 @param {Function} callback Función que se llamará al terminar la carga.
 **/
 function enviarParametrosPOST(url, nombre1, valor1, nombre2, valor2, divId, callback){
-    let div=document.getElementById(divId)
+    /*let div=document.getElementById(divId)
     let formData=new FormData()
     formData.append(nombre1,valor1)
     formData.append(nombre2,valor2)
@@ -113,9 +113,22 @@ function enviarParametrosPOST(url, nombre1, valor1, nombre2, valor2, divId, call
     .then(data=>{
         div.innerHTML=data
         if(callback) callback()
+    })*/
+    let datos={}
+    datos[nombre1]=valor1
+    datos[nombre2]=valor2
+    $.ajax({
+        url:url,
+        type:'POST',
+        data:datos,
+        success: function (resultado){
+            $('#div5').text(resultado)
+            if(callback) callback()
+        }
     })
 }
 
+enviarParametrosPOST('php/datos_post.php','apellidos','Pérez','edad','127','div5',exito)
 /**
 Realiza una petición asíncrona por método POST y le pasa un parámetro.
 Utiliza la función fetch para realizar la llamada y muestra la respuesta en un div.
